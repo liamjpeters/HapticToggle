@@ -24,6 +24,9 @@ jobs:
       - name: Decode Keystore
         run: echo "${{ secrets.KEYSTORE }}" | base64 --decode > app/release.jks
 
+      - name: Make Gradlew Executable
+        run: chmod +x gradlew
+
       - name: Build App Bundle
         run: ./gradlew bundleRelease
         env:
