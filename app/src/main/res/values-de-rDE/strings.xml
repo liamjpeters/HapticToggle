@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Haptic Toggle</string>
+    <string name="app_short_label">Haptik</string>
+
+    <string name="permission_title">Berechtigung erforderlich</string>
+    <string name="permission_overview">Diese App benötigt die Berechtigung zum Ändern der Systemeinstellungen, um die Haptik geräteweit ein- und auszuschalten.</string>
+    <string name="permission_call_to_action">Um das Umschalten der Haptik zu ermöglichen, erteilen Sie der App bitte die Berechtigung \"Systemeinstellungen ändern\".</string>
+    <string name="permission_button">Berechtigung erteilen</string>
+
+    <string name="success_title">Alles bereit!</string>
+    <string name="success_overview_1">1. Wischen Sie nach unten, um die Schnelleinstellungen zu öffnen.</string>
+    <string name="success_overview_2">2. Tippen Sie auf die Bearbeiten-Schaltfläche.</string>
+    <string name="success_overview_3">3. Ziehen Sie \"Haptik\" in Ihre aktiven Kacheln.</string>
+
+    <string name="success_tile_added">Kachel wurde zu den Schnelleinstellungen hinzugefügt</string>
+
+    <string name="success_button_active">Zu Schnelleinstellungen hinzufügen</string>
+
+    <string name="success_button_inactive">Bereits hinzugefügt</string>
+
+    <string name="manual_tile_add">Bitte fügen Sie die Kachel manuell über das Menü hinzu</string>
+
+    <string name="haptics_enabled">Haptik Ein</string>
+    <string name="haptics_disabled">Haptik Aus</string>
+
+</resources>

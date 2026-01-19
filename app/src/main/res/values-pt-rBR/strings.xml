@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Haptic Toggle</string>
+    <string name="app_short_label">Vibração</string>
+    <string name="permission_title">Permissão Necessária</string>
+    <string name="permission_overview">Este aplicativo requer permissão para modificar as configurações do sistema para alternar a vibração globalmente no seu dispositivo.</string>
+    <string name="permission_call_to_action">Para ativar o alternador de vibração, conceda ao aplicativo a permissão para \"Modificar configurações do sistema\".</string>
+    <string name="permission_button">Conceder Permissão</string>
+    <string name="success_title">Tudo pronto!</string>
+    <string name="success_overview_1">1. Deslize para baixo para abrir as Configurações Rápidas.</string>
+    <string name="success_overview_2">2. Toque no botão de editar.</string>
+    <string name="success_overview_3">3. Arraste \"Vibração\" para seus ícones ativos.</string>
+    <string name="success_tile_added">O ícone foi adicionado às Configurações Rápidas</string>
+    <string name="success_button_active">Adicionar às Configurações Rápidas</string>
+    <string name="success_button_inactive">Adicionado</string>
+    <string name="manual_tile_add">Adicione o ícone manualmente pelo painel</string>
+    <string name="haptics_enabled">Vibração Ativada</string>
+    <string name="haptics_disabled">Vibração Desativada</string>
+</resources>

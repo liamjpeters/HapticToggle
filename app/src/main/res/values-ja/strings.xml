@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Haptic Toggle</string>
+    <string name="app_short_label">触覚フィードバック</string>
+    <string name="permission_title">権限が必要です</string>
+    <string name="permission_overview">このアプリは、デバイスの触覚フィードバックをグローバルに切り替えるために、システム設定を変更する権限が必要です。</string>
+    <string name="permission_call_to_action">設定を切り替えるには、「システム設定の変更」権限を許可してください。</string>
+    <string name="permission_button">権限を許可する</string>
+    <string name="success_title">準備完了！</string>
+    <string name="success_overview_1">1. 下にスワイプしてクイック設定パネルを開きます。</string>
+    <string name="success_overview_2">2. 編集ボタンをタップします。</string>
+    <string name="success_overview_3">3. 「触覚フィードバック」をアクティブなタイルにドラッグします。</string>
+    <string name="success_tile_added">クイック設定にタイルが追加されました</string>
+    <string name="success_button_active">クイック設定に追加</string>
+    <string name="success_button_inactive">追加済み</string>
+    <string name="manual_tile_add">パネルから手動でタイルを追加してください</string>
+    <string name="haptics_enabled">触覚：オン</string>
+    <string name="haptics_disabled">触覚：オフ</string>
+</resources>

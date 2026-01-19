@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Haptic Toggle</string>
+    <string name="app_short_label">اللمس</string>
+    <string name="permission_title">الإذن مطلوب</string>
+    <string name="permission_overview">يتطلب هذا التطبيق إذنًا لتعديل إعدادات النظام لتبديل الاهتزاز (Haptics) بشكل عام على جهازك.</string>
+    <string name="permission_call_to_action">لتمكين تبديل الاهتزاز، يرجى منح التطبيق إذن \"تعديل إعدادات النظام\".</string>
+    <string name="permission_button">منح الإذن</string>
+    <string name="success_title">جاهز للانطلاق!</string>
+    <string name="success_overview_1">1. اسحب لأسفل لفتح لوحة الإعدادات السريعة.</string>
+    <string name="success_overview_2">2. اضغط على زر التعديل.</string>
+    <string name="success_overview_3">3. اسحب \"اللمس\" إلى لوحة الإعدادات النشطة.</string>
+    <string name="success_tile_added">تمت إضافة الاختصار إلى الإعدادات السريعة</string>
+    <string name="success_button_active">إضافة إلى الإعدادات السريعة</string>
+    <string name="success_button_inactive">تمت الإضافة</string>
+    <string name="manual_tile_add">يرجى إضافة الاختصار يدويًا من اللوحة</string>
+    <string name="haptics_enabled">اللمس: تفعيل</string>
+    <string name="haptics_disabled">اللمس: إيقاف</string>
+</resources>

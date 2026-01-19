@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Haptic Toggle</string>
+    <string name="app_short_label">Απτικά</string>
+
+    <string name="permission_title">Απαιτείται Άδεια</string>
+    <string name="permission_overview">Αυτή η εφαρμογή απαιτεί άδεια τροποποίησης των ρυθμίσεων συστήματος για την καθολική ενεργοποίηση/απενεργοποίηση της απτικής ανάδρασης στη συσκευή σας.</string>
+    <string name="permission_call_to_action">Για να ενεργοποιήσετε τη δυνατότητα εναλλαγής απτικών, παρακαλούμε παραχωρήστε στην εφαρμογή την άδεια «Τροποποίηση ρυθμίσεων συστήματος».</string>
+    <string name="permission_button">Παραχώρηση Άδειας</string>
+
+    <string name="success_title">Έτοιμοι!</string>
+    <string name="success_overview_1">1. Σύρετε για να ανοίξετε τον πίνακα Γρήγορων Ρυθμίσεων.</string>
+    <string name="success_overview_2">2. Πατήστε το κουμπί επεξεργασίας.</string>
+    <string name="success_overview_3">3. Σύρετε τα «Απτικά» στα ενεργά πλακίδιά σας.</string>
+
+    <string name="success_tile_added">Το πλακίδιο προστέθηκε στις Γρήγορες Ρυθμίσεις</string>
+
+    <string name="success_button_active">Προσθήκη στις Γρήγορες Ρυθμίσεις</string>
+
+    <string name="success_button_inactive">Προστέθηκε στις Γρήγορες Ρυθμίσεις</string>
+
+    <string name="manual_tile_add">Παρακαλούμε προσθέστε το πλακίδιο χειροκίνητα από τον πίνακα</string>
+
+    <string name="haptics_enabled">Απτικά: Ενεργά</string>
+    <string name="haptics_disabled">Απτικά: Ανενεργά</string>
+
+</resources>

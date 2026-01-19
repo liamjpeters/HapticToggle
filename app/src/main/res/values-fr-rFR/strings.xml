@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Haptic Toggle</string>
+    <string name="app_short_label">Haptique</string>
+
+    <string name="permission_title">Autorisation requise</string>
+    <string name="permission_overview">Cette application nécessite l\'autorisation de modifier les paramètres du système pour activer ou désactiver le retour haptique globalement sur votre appareil.</string>
+    <string name="permission_call_to_action">Pour permettre le basculement de l\'haptique, veuillez accorder à l\'application l\'autorisation « Modifier les paramètres du système ».</string>
+    <string name="permission_button">Accorder l\'autorisation</string>
+
+    <string name="success_title">Tout est prêt !</string>
+    <string name="success_overview_1">1. Balayez vers le bas pour ouvrir le panneau des paramètres rapides.</string>
+    <string name="success_overview_2">2. Appuyez sur le bouton de modification.</string>
+    <string name="success_overview_3">3. Faites glisser « Haptique » vers vos tuiles actives.</string>
+
+    <string name="success_tile_added">La tuile a été ajoutée aux paramètres rapides</string>
+
+    <string name="success_button_active">Ajouter aux paramètres rapides</string>
+
+    <string name="success_button_inactive">Ajouté aux paramètres rapides</string>
+
+    <string name="manual_tile_add">Veuillez ajouter la tuile manuellement depuis le panneau</string>
+
+    <string name="haptics_enabled">Haptique activée</string>
+    <string name="haptics_disabled">Haptique désactivée</string>
+
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Permission used to toggle haptics on/off globally from the quick tile.
+        The end users permissions is very clearly sought for this.
+        The setting is only toggled by the tile when the user clicks it.
+    -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!--
+        We send a vibrate when the user toggles haptics back on as a form of
+        feedback to the user that the action has worked.
+    -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HapticToggle">
+
+        <!--
+            Main Activity is launched when the user first opens the app.
+
+            If the app has not been granted the Write Settings permission, we
+            show a screen explaining why the app needs this permission and a
+            button to take the user to the settings page to grant it.
+
+            If the app has been granted the Write Settings permission, we show
+            a button to add the tile to the main quick settings panel. If the
+            user has already added the tile, we show a message saying so.
+        -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:label="@string/app_short_label"
+            android:theme="@style/Theme.HapticToggle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!--
+            The service which manages the quick tile. If the user adds the tile
+            and clicks it before opening the app and granting permissions, the
+            quick tile launches this app, which explains the permissions and why
+            they are required.
+        -->
+        <service
+            android:name=".service.HapticTileService"
+            android:exported="true"
+            android:icon="@drawable/mobile_vibrate_24px"
+            android:label="Haptics"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+
+            <!--
+                Tile functions primarily as a two-state switch, so telling Android
+                this helps improve accessibility.
+            -->
+            <meta-data
+                android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+                android:value="true" />
+
+            <!-- The tile is a Utility. Categorise it as such -->
+            <meta-data
+                android:name="android.service.quicksettings.TILE_CATEGORY"
+                android:value="android.service.quicksettings.CATEGORY_UTILITIES" />
+
+            <!--
+                As the setting can be updated outside of just the toggle or our app,
+                we mark the tile as active.
+             -->
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="true" />
+        </service>
+    </application>
+
+</manifest>

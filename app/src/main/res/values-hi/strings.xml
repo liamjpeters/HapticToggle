@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Haptic Toggle</string>
+    <string name="app_short_label">Haptics</string>
+
+    <string name="permission_title">अनुमति आवश्यक है</string>
+    <string name="permission_overview">इस ऐप को आपके डिवाइस पर हैप्टिक्स (कंपन) को चालू या बंद करने के लिए सिस्टम सेटिंग्स बदलने की अनुमति चाहिए।</string>
+    <string name="permission_call_to_action">हैप्टिक्स टॉगल करने के लिए, कृपया ऐप को \'सिस्टम सेटिंग्स संशोधित करें\' (Modify System Settings) की अनुमति दें।</string>
+    <string name="permission_button">अनुमति दें</string>
+
+    <string name="success_title">तैयार है!</string>
+    <string name="success_overview_1">1. त्वरित सेटिंग्स (Quick Settings) खोलने के लिए नीचे स्वाइप करें।</string>
+    <string name="success_overview_2">2. एडिट (Edit) बटन पर टैप करें।</string>
+    <string name="success_overview_3">3. \'Haptics\' को अपनी सक्रिय टाइल्स में ड्रैग करें।</string>
+
+    <string name="success_tile_added">टाइल क्विक सेटिंग्स में जोड़ दी गई है</string>
+    <string name="success_button_active">क्विक सेटिंग्स में जोड़ें</string>
+    <string name="success_button_inactive">जोड़ दिया गया है</string>
+
+    <string name="manual_tile_add">कृपया टाइल को मैन्युअल रूप से जोड़ें</string>
+
+    <string name="haptics_enabled">हैप्टिक्स चालू</string>
+    <string name="haptics_disabled">हैप्टिक्स बंद</string>
+</resources>

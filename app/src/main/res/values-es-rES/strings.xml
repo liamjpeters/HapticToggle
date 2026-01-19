@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Haptic Toggle</string>
+    <string name="app_short_label">Vibración</string>
+
+    <string name="permission_title">Permiso requerido</string>
+    <string name="permission_overview">Esta aplicación requiere permiso para modificar los ajustes del sistema para activar o desactivar la respuesta háptica globalmente en tu dispositivo.</string>
+    <string name="permission_call_to_action">Para permitir el cambio de la vibración, por favor otorga a la aplicación el permiso de \"Modificar ajustes del sistema\".</string>
+    <string name="permission_button">Otorgar permiso</string>
+
+    <string name="success_title">¡Todo listo!</string>
+    <string name="success_overview_1">1. Desliza hacia abajo para abrir el panel de Ajustes rápidos.</string>
+    <string name="success_overview_2">2. Toca el botón de editar.</string>
+    <string name="success_overview_3">3. Arrastra \"Vibración\" a tus iconos activos.</string>
+
+    <string name="success_tile_added">El icono se ha añadido a los Ajustes rápidos</string>
+
+    <string name="success_button_active">Añadir a Ajustes rápidos</string>
+
+    <string name="success_button_inactive">Añadido a Ajustes rápidos</string>
+
+    <string name="manual_tile_add">Por favor, añade el icono manualmente desde el panel</string>
+
+    <string name="haptics_enabled">Vibración activada</string>
+    <string name="haptics_disabled">Vibración desactivada</string>
+
+</resources>

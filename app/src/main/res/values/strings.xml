@@ -1,0 +1,41 @@
+<resources>
+    <!-- The name of the app and a shorter name for the launcher where space is more premium -->
+    <string name="app_name">Haptic Toggle</string>
+    <string name="app_short_label">Haptics</string>
+
+    <!-- The title shown on the permissions overview, explaining that the app needs permission -->
+    <string name="permission_title">Permission Required</string>
+    <!-- The overview of the permissions required. This should explain to the user why we need the permission -->
+    <string name="permission_overview">This app requires permission to modify system settings to toggle haptics globally for your device.</string>
+    <!-- A call to action telling the user to grant the app the required permissions. -->
+    <string name="permission_call_to_action">To enable haptics toggling, please grant the app permissions to \'Modify System Settings\'.</string>
+    <!-- The button text for the call to action. -->
+    <string name="permission_button">Grant Permission</string>
+
+    <!-- The title of the success screen. -->
+    <string name="success_title">Ready to go!</string>
+    <!-- The first step of adding the tile to the Quick Settings panel. Swipe down to open quick settings -->
+    <string name="success_overview_1">1. Swipe to open the Quick Settings panel.</string>
+    <!-- The second step of adding the tile to the Quick Settings panel. Edit the quick settings shade -->
+    <string name="success_overview_2">2. Tap the edit button.</string>
+    <!-- The third and final step of adding the tile to the Quick Settings panel. Drag our Quick Tile into the shade -->
+    <string name="success_overview_3">3. Drag \'Haptics\' into your active tiles.</string>
+
+    <!-- The message shown when permissions are granted and the tile is in the Quick tiles shade -->
+    <string name="success_tile_added">Tile has been added to Quick Settings</string>
+
+    <!-- The button text for the call to action when the tile is not in the Quick tiles shade. Launches the native UI to add the tile -->
+    <string name="success_button_active">Add to Quick Settings</string>
+
+    <!-- The button text for the call to action when the tile is in the Quick tiles shade. Button is disabled -->
+    <string name="success_button_inactive">Added to Quick Settings</string>
+
+    <!-- When the native UI is not available, this message is shown to the user telling them they should add the quick settings tile themselves -->
+    <string name="manual_tile_add">Please add the tile manually from the shade</string>
+
+    <!-- Shown in the quick settings tile when Haptics is enabled, alongside an icon of a "vibrating" phone -->
+    <string name="haptics_enabled">Haptics On</string>
+    <!-- Shown in the quick settings tile when Haptics is disabled, alongside an icon of a "disabled" phone (a phone with a strike through it) -->
+    <string name="haptics_disabled">Haptics Off</string>
+
+</resources>
