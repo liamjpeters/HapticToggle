@@ -7,6 +7,7 @@ import android.provider.Settings
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -14,7 +15,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.core.net.toUri
 import uk.co.liampeters.haptictoggle.ui.screens.PermissionScreen
 import uk.co.liampeters.haptictoggle.ui.screens.SuccessScreen
@@ -28,11 +31,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             HapticToggleTheme {
-                Scaffold { innerPadding ->
+                Scaffold (
+                ) { innerPadding ->
                     Surface(
                         color = MaterialTheme.colorScheme.background,
                         modifier = Modifier
-                            .fillMaxSize()
                             .padding(innerPadding)
                     ) {
                         // Check if the tile has been added to the quick settings shade. We do this
@@ -62,31 +65,37 @@ class MainActivity : ComponentActivity() {
                                 false
                             )
                         }
-
-                        if (!hasPermission.value) {
-                            // If we don't have the requisite permissions, show the UI which explains
-                            // the permissions we require and why. Clicking the grant permission
-                            // button will deep link into settings to where the user can choose to
-                            // toggle the settings.
-                            PermissionScreen(onGrantClick = {
-                                val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS).apply {
-                                    data = "package:$packageName".toUri()
-                                }
-                                startActivity(intent)
-                            })
-                        } else {
-                            // If we have the required permissions, show the success screen. This
-                            // will guide the user to adding the tile to the Quick Settings shade.
-                            SuccessScreen(
-                                tileAdded = isTileAdded.value,
-                                showQuickAddButton = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU,
-                                onQuickAddClick = {
-                                    requestAddTile(this) { success ->
-                                        if (success) isTileAdded.value = true
+                        val context = LocalContext.current
+                        Box(
+                            modifier = Modifier.fillMaxSize(),
+                            contentAlignment = Alignment.TopCenter
+                        ) {
+                            if (!hasPermission.value) {
+                                // If we don't have the requisite permissions, show the UI which explains
+                                // the permissions we require and why. Clicking the grant permission
+                                // button will deep link into settings to where the user can choose to
+                                // toggle the settings.
+                                PermissionScreen(onGrantClick = {
+                                    val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS).apply {
+                                        data = "package:$packageName".toUri()
                                     }
-                                }
-                            )
+                                    startActivity(intent)
+                                })
+                            } else {
+                                // If we have the required permissions, show the success screen. This
+                                // will guide the user to adding the tile to the Quick Settings shade.
+                                SuccessScreen(
+                                    tileAdded = isTileAdded.value,
+                                    showQuickAddButton = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU,
+                                    onQuickAddClick = {
+                                        requestAddTile(context) { success ->
+                                            if (success) isTileAdded.value = true
+                                        }
+                                    }
+                                )
+                            }
                         }
+
                     }
                 }
             }

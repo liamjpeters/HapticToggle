@@ -1,8 +1,10 @@
 package uk.co.liampeters.haptictoggle.ui.screens
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Warning
 import androidx.compose.material3.Button
@@ -25,7 +27,10 @@ import uk.co.liampeters.haptictoggle.util.NightModeMultiLanguagePreview
 fun PermissionScreen(onGrantClick: () -> Unit) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.padding(24.dp)
+        modifier = Modifier
+            .padding(24.dp)
+            .widthIn(max = 600.dp)
+            .fillMaxWidth()
     ) {
         Icon(
             Icons.Rounded.Warning,

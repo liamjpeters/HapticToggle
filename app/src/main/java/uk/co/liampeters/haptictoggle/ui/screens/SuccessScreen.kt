@@ -1,9 +1,9 @@
 package uk.co.liampeters.haptictoggle.ui.screens
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material3.Button
@@ -29,7 +29,9 @@ fun SuccessScreen(
     onQuickAddClick: () -> Unit) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.padding(24.dp)
+        modifier = Modifier
+            .padding(24.dp)
+            .widthIn(max = 600.dp)
     ) {
         Icon(
             Icons.Default.CheckCircle,
@@ -49,7 +51,6 @@ fun SuccessScreen(
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier
                     .padding(top = 16.dp)
-                    .fillMaxWidth(1.0f)
                     .align(Alignment.Start)
             )
             Text(
@@ -57,7 +58,6 @@ fun SuccessScreen(
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier
                     .padding(top = 8.dp)
-                    .fillMaxWidth(1.0f)
                     .align(Alignment.Start)
             )
             Text(
@@ -65,7 +65,6 @@ fun SuccessScreen(
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier
                     .padding(top = 8.dp)
-                    .fillMaxWidth(1.0f)
                     .align(Alignment.Start)
             )
         } else {
