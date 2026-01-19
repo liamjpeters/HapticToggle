@@ -79,13 +79,6 @@
                 android:name="android.service.quicksettings.TILE_CATEGORY"
                 android:value="android.service.quicksettings.CATEGORY_UTILITIES" />
 
-            <!--
-                As the setting can be updated outside of just the toggle or our app,
-                we mark the tile as active.
-             -->
-            <meta-data
-                android:name="android.service.quicksettings.ACTIVE_TILE"
-                android:value="true" />
         </service>
     </application>
 
