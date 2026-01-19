@@ -46,7 +46,7 @@ jobs:
         if: github.event_name == 'release'
         uses: r0adkll/upload-google-play@v1
         with:
-          serviceAccountJsonRaw: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+          serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           packageName: uk.co.liampeters.haptictoggle
           releaseFiles: app/build/outputs/bundle/release/app-release.aab
           track: internal # Can be 'production'
