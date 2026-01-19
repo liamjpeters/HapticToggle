@@ -1,0 +1,49 @@
+name: Android CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  release:
+    types: [ published ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # Important for versioning
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Decode Keystore
+        run: echo "${{ secrets.KEYSTORE }}" | base64 --decode > app/release.jks
+
+      - name: Build App Bundle
+        run: ./gradlew bundleRelease
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+
+      # Step 3: Save the Bundle as an Artifact (runs on every push to main)
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v6
+        with:
+          name: app-bundle
+          path: app/build/outputs/bundle/release/app-release.aab
+
+      # Step 4: Upload to Play Store (ONLY runs on a GitHub Release)
+      - name: Deploy to Play Store
+        if: github.event_name == 'release'
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonRaw: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+          packageName: uk.co.liampeters.haptictoggle
+          releaseFiles: app/build/outputs/bundle/release/app-release.aab
+          track: internal # Can be 'production'
